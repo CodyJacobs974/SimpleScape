@@ -107,7 +107,7 @@ const OsrsInterface: React.FC<OsrsInterfaceProps> = ({
       </div>
       
       {/* Bottom Tabs */}
-      <div className="absolute top-[467px] left-[532px] w-[218px] flex flex-wrap gap-x-[4px]" role="toolbar" aria-label="Utility Buttons">
+      <div className="absolute top-[487px] left-[532px] w-[218px] flex flex-wrap gap-x-[4px]" role="toolbar" aria-label="Utility Buttons">
         {bottomTabs.map(tab => (
             <TabButton key={tab.name} iconName={tab.icon} isActive={false} onClick={tab.action} title={tab.title} />
         ))}
