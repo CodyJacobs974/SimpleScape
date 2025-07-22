@@ -78,8 +78,7 @@ const OsrsInterface: React.FC<OsrsInterfaceProps> = ({
     <div
       className="relative w-[765px] h-[503px] bg-no-repeat shrink-0"
       style={{
-        backgroundImage: "url('https://oldschool.runescape.wiki/images/3/33/Game_frame_-_fixed_mode.png?19d55')",
-        imageRendering: 'pixelated',
+        backgroundImage: "url('/assets/osrs_interface.png')",
       }}
       role="main"
       aria-label="Game Interface"
