@@ -95,19 +95,19 @@ const OsrsInterface: React.FC<OsrsInterfaceProps> = ({
       </div>
       
       {/* Top Tabs */}
-      <div className="absolute top-[173px] left-[547px] w-[218px] flex flex-wrap gap-x-[1px]" role="tablist" aria-label="Main Menu">
+      <div className="absolute top-[173px] left-[537px] w-[218px] flex flex-wrap gap-x-[1px]" role="tablist" aria-label="Main Menu">
         {topTabs.map(tab => (
             <TabButton key={tab.name} iconName={tab.icon} isActive={activeTab === tab.name} onClick={() => setActiveTab(tab.name)} title={tab.title} />
         ))}
       </div>
 
       {/* Side Panel */}
-      <div className="absolute top-[207px] left-[547px] w-[218px] h-[261px] overflow-y-auto" role="tabpanel">
+      <div className="absolute top-[207px] left-[537px] w-[218px] h-[261px] overflow-y-auto" role="tabpanel">
         {renderActivePanel()}
       </div>
       
       {/* Bottom Tabs */}
-      <div className="absolute top-[469px] left-[547px] w-[218px] flex flex-wrap gap-x-[1px]" role="toolbar" aria-label="Utility Buttons">
+      <div className="absolute top-[469px] left-[537px] w-[218px] flex flex-wrap gap-x-[1px]" role="toolbar" aria-label="Utility Buttons">
         {bottomTabs.map(tab => (
             <TabButton key={tab.name} iconName={tab.icon} isActive={false} onClick={tab.action} title={tab.title} />
         ))}
