@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GameAction, GameState, ItemName } from '../types';
+import osrsInterface from '/assets/osrs_interface.png';
 import ActionLog from './ActionLog';
 import GameWindow from './GameWindow';
 import StatsPanel from './StatsPanel';
@@ -78,7 +79,7 @@ const OsrsInterface: React.FC<OsrsInterfaceProps> = ({
     <div
       className="relative w-[765px] h-[503px] bg-no-repeat shrink-0"
       style={{
-        backgroundImage: "url('/assets/osrs_interface.png')",
+        backgroundImage: `url(${osrsInterface})`,
       }}
       role="main"
       aria-label="Game Interface"
