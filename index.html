@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleScape</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @font-face {
+        font-family: 'RuneScape UF';
+        src: url('https://runescape.wiki/w/MediaWiki:ResourceLoader.php?id=EvTzT') format('woff2');
+      }
+       @font-face {
+        font-family: 'RuneScape Chat';
+        src: url('https://oldschool.runescape.wiki/w/MediaWiki:ResourceLoader.php?id=Vpk4S') format('woff');
+      }
+      body {
+        font-family: 'RuneScape UF', monospace;
+        background-image: url('https://oldschool.runescape.wiki/images/c/c5/Dark_background.png?6ea97');
+        color: #ff981f;
+        text-shadow: 1px 1px 2px black;
+      }
+      #root {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        min-height: 100vh;
+      }
+      .osrs-chat-text {
+        font-family: 'RuneScape Chat', monospace;
+        color: black;
+        text-shadow: none;
+        line-height: 1.2;
+        font-size: 15px;
+      }
+      .osrs-panel {
+        background-color: #463d2a;
+        border: 2px solid;
+        border-color: #5d543e #3c362a #3c362a #5d543e;
+        box-shadow: 0 0 0 2px #000;
+        position: relative;
+      }
+      .osrs-panel-background {
+         background-image: url('https://oldschool.runescape.wiki/images/a/a3/Brown_textured_background.png?1a3b3');
+         background-color: #463d2a;
+      }
+      .osrs-button {
+          background-color: #463d2a;
+          border: 2px solid;
+          border-color: #5d543e #3c362a #3c362a #5d543e;
+          color: #ff981f; /* OSRS yellow/orange */
+          text-shadow: 1px 1px 2px black;
+          padding: 8px 16px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.75rem;
+          transition: background-color 0.15s ease-in-out;
+      }
+      .osrs-button:not(:disabled):hover {
+          background-color: #5a4f3a; /* A slightly lighter shade */
+          cursor: pointer;
+      }
+      .osrs-button:disabled {
+          color: #8a8a8a;
+          background-color: #292929;
+          border-color: #333;
+          cursor: not-allowed;
+      }
+      @keyframes fill-progress {
+        from { width: 0%; }
+        to { width: 100%; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.10.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
